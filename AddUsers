@@ -1,4 +1,0 @@
-        echo -e "Enter user name file:"
-        read usrlst
-
-        sudo useradd "$usrlst" -m -p "usrlst"
