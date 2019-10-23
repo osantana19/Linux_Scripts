@@ -16,7 +16,6 @@ for line in myfile:                                            #For loop to read
     if ans == 'no':                                            #If statement that checks to see if the  user wants to create users in the same group or not
         print('What group would you like the user ' + username4 + ' to be apart of?')
         grpname = input()
-        grpname = (grpname + '// ')
         UserList.append(username4 + ', ' + grpname)
         Linuxcmd = ("sudo useradd " + username4)               #Useradd command stored to a variable so Linux can execute it
         os.system(Linuxcmd)                                    #Linux runs variable which stores the command to be used  
