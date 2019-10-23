@@ -1,4 +1,3 @@
-
 import os
 
 print("Write file name that contains users")                   #Asks user for the file they want to read
@@ -19,12 +18,19 @@ for line in myfile:                                            #For loop to read
         grpname = input()
         grpname = (grpname + '// ')
         UserList.append(username4 + ', ' + grpname)
-        os.system()
+        Linuxcmd = ("sudo useradd " + username4)               #Useradd command stored to a variable so Linux can execute it
+        os.system(Linuxcmd)                                    #Linux runs variable which stores the command to be used  
+        Linuxcmd2 = ("sudo usermod -a -G " + grpname + " " + username4)  #Variable adds user to the group
+        os.system(Linuxcmd2)                                             
         print (username4 + ' has been added to group named ' + grpname)
         print ( 'Would you like to use the same  group name for the rest of the users? Write \'yes\' or \'no\'.')
         ans = input()
-    else:        
-        UserList.append(grpname + username4)
+    else:                                                     
+        UserList.append(grpname + username4)               
+        Linuxcmd = ("sudo useradd " + username4)               
+        os.system(Linuxcmd)                                      
+        Linuxcmd2 = ("sudo usermod -a -G " + grpname + " " + username4) 
+        os.system(Linuxcmd2)
         print (username4 + ' has been added to group named ' + grpname)
     
     
