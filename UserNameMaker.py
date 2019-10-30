@@ -1,4 +1,4 @@
-#This is a Linux script used to make new usernames from a list of names in a document. It also adds the users made to a group
+#This is a Python script used in Linux to make new usernames from a list of names in a document. It also adds the users made to a group
 
 import os
 
