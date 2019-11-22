@@ -8,5 +8,5 @@ filename="group_new${count}"
 sudo cp /etc/group /etc/${filename}    #Will make a copy of the group file so we can hash it later to compare
 
 filename2="group_hash${count}.md5"
-sudo md5sum /etc/${filename} > ~/hash/${filename2}    #Will save a hashed version of the group file
+sudo md5sum /etc/${filename} > ~/hash/${filename2}    #Will save a hashed version of the group file in folder I made called hash
 
